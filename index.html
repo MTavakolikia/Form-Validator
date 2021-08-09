@@ -14,32 +14,39 @@
             <!-- Full Name -->
             <div class="form-group">
                 <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="Full Name">
+                <input type="text" id="name" placeholder="Full Name"
+                required minlength="3" maxlength="100" name="name">
             </div>
             <!-- Phone Number -->
             <div class="form-group">
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" placeholder="555-555-5555">
+                <input type="tel" id="phone" placeholder="555-555-5555"
+                required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone number">
             </div>
             <!-- Email Address -->
             <div class="form-group">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="email@address.com">
+                <input type="email" id="email" placeholder="email@address.com"
+                required name="email">
+                
             </div>
             <!-- Website URL -->
             <div class="form-group">
                 <label for="website">Website URL</label>
-                <input type="url" id="website" placeholder="www.google.com">
+                <input type="url" id="website" placeholder="http://google.com"
+                required name="URL">
             </div>
             <!-- Password -->
             <div class="form-group">
                 <label for="Password1">Password</label>
-                <input type="password" id="Password1" placeholder="Create Password">
+                <input type="password" id="Password1" placeholder="Create Password (Min. 8 Character)"
+                required  pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" name="password">
             </div>
             <!-- Confirm Passsword -->
             <div class="form-group">
                 <label for="Password2">Confirm Password</label>
-                <input type="password" id="Password2" placeholder="Confirm Password">
+                <input type="password" id="Password2" placeholder="Confirm Password"
+                required>
             </div>
             <button type="submit">Register</button>
         </form>
